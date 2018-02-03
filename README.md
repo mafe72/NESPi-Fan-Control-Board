@@ -82,4 +82,4 @@ Basic Usage
 		
 * FAN OFF
 		
-		Fan will turn OF when temperature under 40C
+		Fan will turn OFF when temperature under 40C
