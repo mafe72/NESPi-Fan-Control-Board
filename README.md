@@ -1,6 +1,6 @@
 Retroflag NESPi Fan Control Board
 ===============================
-This is temperature control board for the RetroFlag NESPi case, this PCB add the ability to cooldown your system during game play.
+This is a temperature control board for the RetroFlag NESPi case, this PCB add the ability to cooldown your system during game play.
 
 License
 -------
@@ -69,7 +69,7 @@ $ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Fan-Control-Board/raw/mas
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Fan Control Board.**
 Installation will automatically reboot once all processes is completed.
 
-After rebooting, your **RRetroflag NESPi Fan Control Board** is now fully functional.
+After rebooting, your **Retroflag NESPi Fan Control Board** is now fully functional.
 
 ----------
 	
