@@ -12,9 +12,13 @@ the Creative Commons Foundation (https://creativecommons.org/licenses/by-nc-sa/4
 Features
 --------
 
+* Small footprint
+
 * Easy Temperature Control
 
 * 2 wire fan control
+
+* Minimal hardware modification
 
 * One click script installation
 
