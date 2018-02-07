@@ -20,7 +20,7 @@ Features
 
 * Minimal hardware modification
 
-* One click script installation
+* One line script installation
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com)
 
