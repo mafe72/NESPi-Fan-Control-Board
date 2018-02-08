@@ -47,14 +47,14 @@ Prerequisites
 
 4. Basic soldering skills
 
-      This PCB need to be solder directly into the build-in fan connector.
+      This PCB need to be solder directly into the built-in fan connector.
 	  
 Hardware Installation
 ---------------------
 It's very important to follow the right pin configuration to prevent damage to your Pi.
 
   * `FAN_CT Pin` - Connect to GPIO 4 (RPI pin 7)
-  * `SOURCE Pin` - Connect to the build-in fan connector (follow polarity markings)
+  * `SOURCE Pin` - Connect to the built-in fan connector (follow polarity markings)
   
 ![Pin Connection](pictures/nespicase_fan_ctrl_connection.png)
 
