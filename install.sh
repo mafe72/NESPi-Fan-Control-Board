@@ -20,16 +20,17 @@ sudo pip install psutil pyserial
 cd /opt/
 sudo mkdir RetroFlag
 cd /opt/RetroFlag
-script=fan_ctrl.py
+script=fan_ctrl-retroflag.py
 
 if [ -e $script ];
 	then
-		echo "Script fan_ctrl.py already exists. Updating..."
+		echo "Script fan_ctrl-retroflag.py already exists. Updating..."
 		rm $script
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl.py"
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
 		echo "Update complete."
 	else
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl.py"
+		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
+                echo "Download  complete."
 fi
 #-----------------------------------------------------------
 
@@ -43,12 +44,17 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
                sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&/c\' "$RC";
 fi
 
+if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
+        then
+               sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&/c\' "$RC";
+fi
+
 #Adding new configuration----------- 
-if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
+if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/fan_ctrl.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&\n&/g" "$RC"
 		echo "File /etc/rc.local configured."
 fi
 #-----------------------------------------------------------
