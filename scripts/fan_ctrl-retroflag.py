@@ -46,4 +46,4 @@ while True:
 		fan.on()
 	if cpuTemp < fanOffTemp:
 		fan.off()
-	time.sleep(0.50)
+	time.sleep(1.00)
