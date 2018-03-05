@@ -22,6 +22,8 @@ Features
 
 * One-line script installation
 
+* Also compatible with the YIKESHU Black NES Case
+
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
 
 ----------
