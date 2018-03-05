@@ -1,6 +1,6 @@
-Retroflag NESPi Fan Control Board
+NESPi Fan Control Board
 ===============================
-This is a temperature control board for the RetroFlag NESPi case, this PCB add the ability to cooldown your system during game play.
+This is a temperature control board for the RetroFlag NESPi Case and the YIKESHU Black NES Case, this PCB add the ability to cooldown your system during game play.
 
 License
 -------
@@ -22,7 +22,7 @@ Features
 
 * One-line script installation
 
-* Also compatible with the YIKESHU Black NES Case
+* Compatible with RetroFlag NESPi Case and the YIKESHU Black NES Case
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
 
@@ -73,13 +73,13 @@ You can setup this via SSH or using the command line interface in your RetroPie.
 
 Open your terminal and type the one-line installation command below:
 ```bash
-$ wget -O - "https://github.com/mafe72/Retroflag-NESPi-Fan-Control-Board/raw/master/install.sh" | sudo bash
+$ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/install.sh" | sudo bash
 ```
 
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Fan Control Board.**
 Installation will automatically reboot once all processes is completed.
 
-After rebooting, your **Retroflag NESPi Fan Control Board** is now fully functional.
+After rebooting, your **NESPi Fan Control Board** is now fully functional.
 
 ----------
 	
