@@ -66,7 +66,7 @@ Software Installation
 **NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports;
 If you haven't, see the [Hardware Installation](#hardware-installation) section.
 
-This instructions are a *step-by-step guide* to install necessary software for your **Retroflag NESPi Fan Control Board**.
+This instructions are a *step-by-step guide* to install necessary software for your **NESPi Fan Control Board**.
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
 
 ----------
@@ -76,7 +76,7 @@ Open your terminal and type the one-line installation command below:
 $ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/install.sh" | sudo bash
 ```
 
-The script will automatically install pertinent files and configure your Raspberry Pi to enable **Retroflag NESPi Fan Control Board.**
+The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
 Installation will automatically reboot once all processes is completed.
 
 After rebooting, your **NESPi Fan Control Board** is now fully functional.
