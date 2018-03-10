@@ -26,10 +26,10 @@ if [ -e $script ];
 	then
 		echo "Script fan_ctrl-retroflag.py already exists. Updating..."
 		rm $script
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
+		wget "https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
 		echo "Update complete."
 	else
-		wget "https://raw.githubusercontent.com/mafe72/Retroflag-NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
+		wget "https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
                 echo "Download  complete."
 fi
 #-----------------------------------------------------------
@@ -60,7 +60,7 @@ fi
 #-----------------------------------------------------------
 
 #Step 6) Reboot to apply changes----------------------------
-echo "Retroflag NESPi Fan Control Board installation done. Will now reboot after 3 seconds."
+echo "NESPi Fan Control Board installation done. Will now reboot after 3 seconds."
 sleep 4
 sudo reboot
 #-----------------------------------------------------------
