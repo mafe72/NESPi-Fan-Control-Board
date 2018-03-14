@@ -8,6 +8,15 @@ fi
 #-----------------------------------------------------------
 
 #Step 2) Update repository----------------------------------
+cd /boot/
+File=config.txt
+if grep -q "avoid_warnings=1" "$File";
+        then
+                echo "warnings already disable. Doing nothing."
+        else
+                echo "avoid_warnings=1" >> "$File"
+                echo "warnings disable."
+fi
 sudo apt-get update -y
 #-----------------------------------------------------------
 
@@ -40,6 +49,11 @@ RC=rc.local
 
 #Cleaning deprecated configuration----
 if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
+        then
+               sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&/c\' "$RC";
+fi
+
+if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
         then
                sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&/c\' "$RC";
 fi
