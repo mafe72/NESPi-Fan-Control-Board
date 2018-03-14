@@ -10,6 +10,10 @@ fi
 #Step 2) Update repository----------------------------------
 cd /boot/
 File=config.txt
+if grep -q "avoid_warnings=0" "$File";
+        then
+		sed -i '/avoid_warnings=0/d' "$File";
+fi
 if grep -q "avoid_warnings=1" "$File";
         then
                 echo "warnings already disable. Doing nothing."
