@@ -81,6 +81,24 @@ Installation will automatically reboot once all processes is completed.
 
 After rebooting, your **NESPi Fan Control Board** is now fully functional.
 
+Software Uninstall
+---------------------
+
+This instructions are a *step-by-step guide* to uninstall necessary software for your **NESPi Fan Control Board**.
+You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
+
+----------
+
+Open your terminal and type the one-line installation command below:
+```bash
+$ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/uninstall.sh" | sudo bash
+```
+
+The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
+The uninstall script will automatically reboot once all processes are completed.
+
+After rebooting, your **NESPi Fan Control Board** will be fully deactivated.
+
 ----------
 	
 Basic Usage
