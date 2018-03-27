@@ -26,9 +26,10 @@ import RPi.GPIO as GPIO
 import time
 import os
 import socket
-from gpiozero import DigitalOutputDevice
+GPIO.setmode(GPIO.BCM)
 
-fan = DigitalOutputDevice(4)
+GPIO.setup(4, GPIO.OUT)
+fan = GPIO.PWM(4, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
 def getCPUtemp():
@@ -43,7 +44,7 @@ while True:
 	fanOnTemp = 55  #Turn on fan when exceeded
 	fanOffTemp = 40  #Turn off fan when under
 	if cpuTemp >= fanOnTemp:
-		fan.on()
+		fan.start(40) #40% duty cycle
 	if cpuTemp < fanOffTemp:
-		fan.off()
+		fan.stop()
 	time.sleep(1.00)
