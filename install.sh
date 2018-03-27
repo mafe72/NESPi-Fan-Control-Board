@@ -82,4 +82,3 @@ echo "NESPi Fan Control Board installation done. Will now reboot after 3 seconds
 sleep 4
 sudo reboot
 #-----------------------------------------------------------
-
