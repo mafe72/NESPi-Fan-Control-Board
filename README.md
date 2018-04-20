@@ -22,7 +22,7 @@ Features
 
 * One-line script installation
 
-* Compatible with RetroFlag NESPi Case and the YIKESHU Black NES Case
+* Compatible with RetroFlag NESPi Case/NESPi Case + and the YIKESHU Black NES Case
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
 
