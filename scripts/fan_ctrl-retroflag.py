@@ -7,7 +7,7 @@
 #
 #####################################
 # Wiring:
-#  GPIO 4  Fan on signal (OUTPUT)
+#  GPIO 17 Fan on signal (OUTPUT)
 #
 #####################################
 #  Required python libraries
@@ -28,8 +28,8 @@ import os
 import socket
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(4, GPIO.OUT)
-fan = GPIO.PWM(4, 50) #PWM frequency set to 50Hz
+GPIO.setup(17, GPIO.OUT)
+fan = GPIO.PWM(17, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
 def getCPUtemp():
@@ -44,7 +44,7 @@ while True:
 	fanOnTemp = 55  #Turn on fan when exceeded
 	fanOffTemp = 40  #Turn off fan when under
 	if cpuTemp >= fanOnTemp:
-		fan.start(40) #40% duty cycle
+		fan.start(90) #90% duty cycle
 	if cpuTemp < fanOffTemp:
 		fan.stop()
 	time.sleep(1.00)
