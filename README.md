@@ -55,7 +55,7 @@ Hardware Installation
 ---------------------
 It's very important to follow the right pin configuration to prevent damage to your Pi.
 
-  * `FAN_CT Pin` - Connect to GPIO 4 (RPI pin 7)
+  * `FAN_CT Pin` - Connect to GPIO 17 (RPI pin 11)
   * `SOURCE Pin` - Connect to the built-in fan connector (follow polarity markings)
   
 ![Pin Connection](pictures/nespicase_fan_ctrl_connection.png)
