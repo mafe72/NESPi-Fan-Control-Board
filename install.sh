@@ -21,7 +21,7 @@ if grep -q "avoid_warnings=1" "$File";
                 echo "avoid_warnings=1" >> "$File"
                 echo "warnings disable."
 fi
-sudo apt-get update -y
+#sudo apt-get update -y
 #-----------------------------------------------------------
 
 #Step 3) Install gpiozero module----------------------------
