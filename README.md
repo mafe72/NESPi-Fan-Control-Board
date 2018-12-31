@@ -28,11 +28,9 @@ Features
 
 ----------
 * Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
-
 ![Fan Control](pictures/RetroflagNESPi-FanCtrl-SMD_iso_w.png)
 
 * Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
-
 ![Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso_w.png)
 ----------
 
