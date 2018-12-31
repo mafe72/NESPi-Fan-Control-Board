@@ -27,9 +27,10 @@ Features
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
 
 ----------
-Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
+* Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
 ![Fan Control](pictures/RetroflagNESPi-FanCtrl-SMD_iso_w.png)
-Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
+
+* Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
 ![Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso_w.png)
 ----------
 
