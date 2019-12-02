@@ -12,7 +12,7 @@ the Creative Commons Foundation (https://creativecommons.org/licenses/by-nc-sa/4
 Features
 --------
 
-* Small footprint
+* Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm)
 
 * Easy Temperature Control
 
@@ -22,7 +22,7 @@ Features
 
 * One-line script installation
 
-* Compatible with RetroFlag SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case
+* Compatible with RetroFlag SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case or any Raspberry Pi Case
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
 
