@@ -16,7 +16,11 @@ Features
 
 * Easy Temperature Control
 
-* 2 wire fan control
+* 1 wire fan control
+
+* Compatible with 5V Fans
+
+* 2.0mm 2-Pin Right-Angle JST Socket Fan Connector
 
 * Minimal hardware modification
 
@@ -113,3 +117,16 @@ Basic Usage
 * FAN OFF
 		
 		Fan will turn OFF when temperature under 40C
+
+----------
+
+Change log of versions
+-----------
+
+V_03302018
+
+* ACT_LED will only light-up when the fan is active.
+
+V_02012018
+
+* Initial release.
