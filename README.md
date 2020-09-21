@@ -1,6 +1,6 @@
 NESPi Fan Control Board
 ===============================
-This is a temperature control board for the RetroFlag NESPi Case and the YIKESHU Black NES Case, this PCB add the ability to cooldown your system during game play.
+This is a temperature control board for the RetroFlag NESPi Case and the YIKESHU Black NES Case, this PCB add the ability to cool down your system during gameplay.
 
 License
 -------
