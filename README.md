@@ -28,7 +28,7 @@ Features
 
 * One-line script installation
 
-* Compatible with RetroFlag SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, NESPi-4 and the YIKESHU Black NES Case or any Raspberry Pi Case
+* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, and the YIKESHU Black NES Case or any Raspberry Pi Case
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product-category/fan-control-kits/)
 
