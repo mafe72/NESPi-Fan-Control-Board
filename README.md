@@ -12,7 +12,7 @@ the Creative Commons Foundation (https://creativecommons.org/licenses/by-nc-sa/4
 Features
 --------
 
-* Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm)
+* Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm - NESPi-4 24.2mm x 11.8mm)
 
 * Easy Temperature Control
 
@@ -22,13 +22,15 @@ Features
 
 * 2.0mm 2-Pin Right-Angle JST Socket Fan Connector
 
+* 2x 1.25mm 2-Pin Right-Angle JST Socket Fan Connector (NESPi-4 only)
+
 * Minimal hardware modification
 
 * One-line script installation
 
-* Compatible with RetroFlag SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case or any Raspberry Pi Case
+* Compatible with RetroFlag SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, NESPi-4 and the YIKESHU Black NES Case or any Raspberry Pi Case
 
-* You can buy the latest version of this board fully assembled from [http://mini-mods.com](http://mini-mods.com/product/retroflag-basic-fan-control/)
+* You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product-category/fan-control-kits/)
 
 ----------
 * NESPi Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
@@ -36,6 +38,9 @@ Features
 
 * SUPERPi-U Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
 ![Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso.png)
+
+* NESPi-4 Fan Control Compatible with: NESPi-4 Case.
+![Fan Control](pictures/NESPi-4-FanCtrl-SMD_iso.png)
 ----------
 
 Prerequisites
@@ -43,7 +48,7 @@ Prerequisites
 
 1. RetroPie
 
-      To install Retropie you may download the image for [Raspberry Pi 3](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3") and follow installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
+      To install Retropie you may download the image for [Raspberry Pi 3](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3/4")/4 and follow the installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
 
 2. Internet connection
 
@@ -122,6 +127,9 @@ Basic Usage
 
 Change log of versions
 -----------
+V_20200917
+
+* Add compatibility with NESPi-4 Case.
 
 V_03302018
 
