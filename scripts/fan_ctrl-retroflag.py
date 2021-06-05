@@ -1,5 +1,5 @@
 #####################################
-# RetroFlag NESPi Control Board Script
+# RetroPie NESPi Control Board Script
 #####################################
 # Hardware:
 # Board by Eladio Martinez
