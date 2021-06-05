@@ -14,7 +14,7 @@ sudo rm -r RetroFlag
 
 #-----------------------------------------------------------
 
-#Step 3) Remove configuration script ------------
+#Step 3) Remove configuration script -------------
 cd /etc/
 RC=rc.local
 
