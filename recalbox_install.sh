@@ -18,10 +18,10 @@ if [ -e $script ];
 	then
 		echo "Script fan_ctrl.py already exists. Updating..."
 		rm $script
-		wget -O  $script "$SourcePath/fan_ctrl_recalbox.py"
+		wget -O  $script "$SourcePath/fan_ctrl-recalbox.py"
 		echo "Update complete."
 	else
-		wget -O  $script "$SourcePath/fan_ctrl_recalbox.py"
+		wget -O  $script "$SourcePath/fan_ctrl-recalbox.py"
         echo "Download complete."
 fi
 #-----------------------------------------------------------
