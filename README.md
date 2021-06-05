@@ -104,7 +104,7 @@ For RecalBox:
 5. On the terminal, type the one-line command below (Case Sensitive):
 
 ```bash
-wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_install" | bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_install.sh" | bash
 ```
 
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
@@ -140,7 +140,7 @@ For RecalBox:
 5. On the terminal, type the one-line command below(Case sensitive):
 
 ```bash
-wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_uninstall" | bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_uninstall.sh" | bash
 ```
 
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
