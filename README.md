@@ -46,9 +46,11 @@ Features
 Prerequisites
 ---------------------
 
-1. RetroPie
+1. RetroPie or RecalBox
 
-      To install Retropie you may download the image for [Raspberry Pi 3](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3/4")/4 and follow the installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
+      To install Retropie you may download the image for [Raspberry Pi](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3/4")2/3/4 and follow the installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
+	  
+      To install RecalBox download the latest image for Raspberry Pi 2/3/4 and follow the installation instruction at the [recalbox website](https://download.recalbox.com "RecalBox installation instructions").	  
 
 2. Internet connection
 
@@ -78,13 +80,31 @@ Software Installation
 If you haven't, see the [Hardware Installation](#hardware-installation) section.
 
 This instructions are a *step-by-step guide* to install necessary software for your **NESPi Fan Control Board**.
-You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
+You can setup this via SSH or using the command line interface in your Raspberry Pi.
 
 ----------
+For RetroPie:
 
-Open your terminal and type the one-line installation command below:
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
+3. Press F4 to open the terminal.
+4. On the terminal, type the one-line command below (Case Sensitive):
+
 ```bash
-$ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/install.sh" | sudo bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/install.sh" | sudo bash
+```
+
+----------
+For RecalBox:
+
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
+3. Press F4 first, then press ALT-F2 to access the terminal.
+4. User: root Password: recalboxroot
+5. On the terminal, type the one-line command below (Case Sensitive):
+
+```bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_install" | bash
 ```
 
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
@@ -96,13 +116,31 @@ Software Uninstall
 ---------------------
 
 This instructions are a *step-by-step guide* to uninstall necessary software for your **NESPi Fan Control Board**.
-You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
+You can setup this via SSH or using the command line interface in your Raspberry Pi.
 
 ----------
+For RetroPie:
 
-Open your terminal and type the one-line installation command below:
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
+3. Press F4 to open the terminal.
+4. On the terminal, type the one-line command below (Case Sensitive):
+
 ```bash
-$ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/uninstall.sh" | sudo bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/uninstall.sh" | sudo bash
+```
+
+----------
+For RecalBox:
+
+1. Make sure internet connected.
+2. Make sure keyboard connected (if working directly on the Raspberry Pi).
+3. Press F4 first, then press ALT-F2 to access the terminal.
+4. User: root Password: recalboxroot
+5. On the terminal, type the one-line command below(Case sensitive):
+
+```bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_uninstall" | bash
 ```
 
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
