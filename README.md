@@ -12,6 +12,8 @@ the Creative Commons Foundation (https://creativecommons.org/licenses/by-nc-sa/4
 Features
 --------
 
+* Fully compatible script with Raspbian, RetroPie, RecalBox and Batocera
+
 * Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm - NESPi-4 24.2mm x 11.8mm)
 
 * Easy Temperature Control
