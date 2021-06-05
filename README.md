@@ -113,8 +113,8 @@ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox
 
 ----------
 For Batocera:
-1. Make sure internet connected.
-2. Make sure keyboard connected.
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
 3. Access the terminal. Follow the instructions [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
 4. User: root Password: linux
 5. On the terminal, type the one-line command below (Case Sensitive):
