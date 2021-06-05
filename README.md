@@ -113,9 +113,9 @@ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox
 For batocera:
 1. Make sure internet connected.
 2. Make sure keyboard connected.
-3. Enter terminal. Follow the istruction [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
+3. Access the terminal. Follow the instructions [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
 4. User: root Password: linux
-5. In the terminal, type the one-line command below(Case sensitive):
+5. On the terminal, type the one-line command below (Case Sensitive):
 
 ```bash
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_install.sh" | bash
@@ -147,8 +147,8 @@ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/uninstal
 ----------
 For RecalBox:
 
-1. Make sure internet connected.
-2. Make sure keyboard connected (if working directly on the Raspberry Pi).
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
 3. Press F4 first, then press ALT-F2 to access the terminal.
 4. User: root Password: recalboxroot
 5. On the terminal, type the one-line command below(Case sensitive):
@@ -159,11 +159,11 @@ wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox
 
 ----------
 For batocera:
-1. Make sure internet connected.
-2. Make sure keyboard connected.
-3. Enter terminal. Follow the istruction [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
+1. Make sure internet is connected.
+2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
+3. Access the terminal. Follow the instructions [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
 4. User: root Password: linux
-5. In the terminal, type the one-line command below(Case sensitive):
+5. On the terminal, type the one-line command below (Case Sensitive):
 
 ```bash
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_uninstall.sh" | bash
