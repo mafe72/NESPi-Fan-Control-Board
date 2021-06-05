@@ -15,6 +15,7 @@
 #	Fan will turn ON when temperature exceeded 55C
 #  FAN OFF
 #	Fan will turn OFF when temperature under 40C
+#
 
 import RPi.GPIO as GPIO
 import time
