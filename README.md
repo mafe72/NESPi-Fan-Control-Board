@@ -191,7 +191,7 @@ Basic Usage
 
 ----------
 
-Change log of versions
+Hardware versions change log
 -----------
 V_20200917
 
