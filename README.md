@@ -46,7 +46,7 @@ Features
 Prerequisites
 ---------------------
 
-1. RetroPie or RecalBox
+1. Raspbian, RetroPie or RecalBox
 
       To install Retropie you may download the image for [Raspberry Pi](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3/4") 2/3/4 and follow the installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
 	  
@@ -83,7 +83,7 @@ This instructions are a *step-by-step guide* to install necessary software for y
 You can setup this via SSH or using the command line interface in your Raspberry Pi.
 
 ----------
-For RetroPie:
+For Raspbian and RetroPie:
 
 1. Make sure internet is connected.
 2. Make sure keyboard is connected (if working directly on the Raspberry Pi).
@@ -105,6 +105,18 @@ For RecalBox:
 
 ```bash
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_install.sh" | bash
+```
+
+----------
+For batocera:
+1. Make sure internet connected.
+2. Make sure keyboard connected.
+3. Enter terminal. Follow the istruction [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
+4. User: root Password: linux
+5. In the terminal, type the one-line command below(Case sensitive):
+
+```bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_install.sh" | bash
 ```
 
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
@@ -141,6 +153,18 @@ For RecalBox:
 
 ```bash
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/recalbox_uninstall.sh" | bash
+```
+
+----------
+For batocera:
+1. Make sure internet connected.
+2. Make sure keyboard connected.
+3. Enter terminal. Follow the istruction [here](https://wiki.batocera.org/access_the_batocera_via_ssh "Access Batocera Linux via ssh").
+4. User: root Password: linux
+5. In the terminal, type the one-line command below(Case sensitive):
+
+```bash
+wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_uninstall.sh" | bash
 ```
 
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
