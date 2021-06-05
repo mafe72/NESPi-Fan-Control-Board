@@ -67,7 +67,7 @@ if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
                sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&/c\' "$RC";
 fi
 
-#Adding new configuration----------- 
+#Adding new configuration------------ 
 if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
 	then
 		echo "File /etc/rc.local already configured. Doing nothing."
