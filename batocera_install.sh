@@ -3,46 +3,58 @@
 SourcePath=https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts
 
 #Step 1)make /boot writable---------------------------------
-sleep 2s
-
 mount -o remount, rw /boot
 mount -o remount, rw /
 #-----------------------------------------------------------
 
 #Step 2)Download Python script-----------------------------
-mkdir /opt/MiniMods
 sleep 2s
 
-script=/opt/MiniMods/fan_ctrl.py
+CNF=/userdata/system/batocera.conf
+
+if grep -q "system.fan.ctrl" $CNF
+	then
+		sed -i '/system.fan.ctrl/c system.fan.ctrl=FANCTRL' $CNF
+		echo "System Fan Control update complete."
+	else
+		echo "system.fan.ctrl=FANCTRL" >> $CNF
+		echo "System Fan Control enabled."
+fi
+
+#-----------------------------------------------------------
+mkdir /userdata/MiniMods
+sleep 2s
+
+script=/userdata/MiniMods/fan_ctrl.py
 if [ -e $script ];
 	then
-		echo "Script fan_ctrl.py already exists. Updating..."
+		echo "Fan control already installed. Updating..."
 		rm $script
-		wget -O  $script "$SourcePath/fan_ctrl-recalbox.py"
-		echo "Update complete."
+		wget -O  $script "$SourcePath/fan_ctrl-batocera.py"
+		echo "Fan Control update complete."
 	else
-		wget -O  $script "$SourcePath/fan_ctrl-recalbox.py"
-        echo "Download complete."
+		wget -O  $script "$SourcePath/fan_ctrl-batocera.py"
+		echo "Fan Control download complete."
 fi
 #-----------------------------------------------------------
 
 sleep 2s
 
 #Step 3) Enable Python script to run on start up------------
-DIR=/etc/init.d/S99NESPiFanCTRL
+DIR=/userdata/system/custom.sh
 
-if grep -q "python $script &" "$DIR";
+if grep -q "python $script &" $DIR
 	then
 		if [ -x $DIR ];
 			then 
-				echo "Executable S99NESPiFanCTRL already configured. Doing nothing."
+				echo "Fan Control script already configured. Doing nothing."
 			else
 				chmod +x $DIR
 		fi
 	else
 		echo "python $script &" >> $DIR
 		chmod +x $DIR
-		echo "Executable S99NESPiFanCTRL configured."
+		echo "Fan Control script configuration competed."
 fi
 #-----------------------------------------------------------
 
@@ -50,5 +62,4 @@ fi
 echo "NESPi Fan Control Board installation done. Will now reboot after 3 seconds."
 sleep 3
 reboot
-#-----------------------------------------------------------
 
