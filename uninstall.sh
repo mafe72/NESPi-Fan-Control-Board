@@ -7,16 +7,18 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #-----------------------------------------------------------
 
+DIR=/opt/MiniMods
+RC=/etc/rc.local
+script=/opt/MiniMods/fan_ctrl.py
+
+#-----------------------------------------------------------
 #Step 2) Remove Installation directory ---------------------
 
-cd /opt/
-sudo rm -r RetroFlag
+sudo rm -r $DIR
 
 #-----------------------------------------------------------
 
 #Step 3) Remove configuration script -------------
-cd /etc/
-RC=rc.local
 
 #Cleaning deprecated configration files --------------------
 echo Cleaning configration files from rc.local
@@ -41,9 +43,14 @@ if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
                sed -i '/sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&/c\' "$RC";
 fi
 
+if grep -q "sudo python $script \&" "$RC";
+        then
+               sed -i '/sudo python $script \&/c\' "$RC";
+fi
+
 #-----------------------------------------------------------
 #Step 4) Reboot to apply changes----------------------------
-echo "NESPi Fan Control Board un-install complete. Will now reboot after 3 seconds."
+echo "NESPi Fan Control Board un-install complete. Rebooting after 3 seconds."
 sleep 4
 sudo reboot
 #-----------------------------------------------------------
