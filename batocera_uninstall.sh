@@ -26,9 +26,9 @@ sleep 2s
 #-----------------------------------------------------------
 
 #Step 3) Remove configuration script -----------------------
-if grep -q 'python $script &' $DIR
+if grep -q 'python \/userdata\/MiniMods\/fan_ctrl.py \&' $DIR
         then
-        sed -i '/python $script &/c ' $DIR
+        sed -i '/python \/userdata\/MiniMods\/fan_ctrl.py \&/c\' $DIR
 fi
 sleep 2s
 #-----------------------------------------------------------
