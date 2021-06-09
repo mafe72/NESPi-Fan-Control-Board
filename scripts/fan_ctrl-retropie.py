@@ -39,9 +39,10 @@ import RPi.GPIO as GPIO
 import time
 import os
 import socket
-GPIO.setmode(GPIO.BCM)
 
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT)
+
 fan = GPIO.PWM(17, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
