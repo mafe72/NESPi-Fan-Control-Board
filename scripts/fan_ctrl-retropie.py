@@ -23,6 +23,18 @@
 #	Fan will turn OFF when temperature under 40C
 #
 
+#----------------------------------------------------
+#Edit these values to change the fan control settings
+
+#Turn off fan when under
+minTEMP=40
+
+#Turn on fan when exceeded
+maxTEMP=55
+
+#NOTE:Reboot Raspberry Pi after changing these values
+#----------------------------------------------------
+
 import RPi.GPIO as GPIO
 import time
 import os
@@ -42,8 +54,8 @@ while True:
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
 	#on and off with only a one second loop
 	cpuTemp = int(float(getCPUtemp()))
-	fanOnTemp = 55  #Turn on fan when exceeded
-	fanOffTemp = 40  #Turn off fan when under
+	fanOnTemp = maxTEMP
+	fanOffTemp = minTEMP
 	if cpuTemp >= fanOnTemp:
 		fan.start(90) #90% duty cycle
 	if cpuTemp < fanOffTemp:
