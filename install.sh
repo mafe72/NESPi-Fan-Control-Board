@@ -11,6 +11,7 @@ SourcePath=https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/mast
 CNF=/boot/config.txt
 script=/opt/MiniMods/fan_ctrl.py
 RC=/etc/rc.local
+DIR=/opt/MiniMods
 
 #-----------------------------------------------------------
 #Step 2) Update repository----------------------------------
@@ -35,7 +36,7 @@ sudo pip install psutil pyserial
 #-----------------------------------------------------------
 
 #Step 4) Download Python script-----------------------------
-sudo mkdir /opt/MiniMods
+sudo mkdir $DIR
 
 if [ -e $script ];
 	then
@@ -50,11 +51,11 @@ fi
 #-----------------------------------------------------------
 
 #Step 5) Enable Python script to run on start up------------
-if grep -q "sudo python $script &" "$RC";
+if grep -q "sudo python \/opt\/MiniMods\/fan_ctrl.py \&" "$RC";
 	then
 		echo "Fan Control script already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python $script \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python \/opt\/MiniMods\/fan_ctrl.py \&\n&/g" "$RC"
 		echo "Fan Control script configured."
 fi
 #-----------------------------------------------------------
