@@ -48,7 +48,7 @@ Features
 Prerequisites
 ---------------------
 
-1. Raspbian, RetroPie, RecalBox or Batocera
+1. A Raspberry Pi runing: Raspbian, RetroPie, RecalBox or Batocera
 
       To install Retropie you may download the image for [Raspberry Pi](https://github.com/RetroPie/RetroPie-Setup/releases/download/4.2/retropie-4.2-rpi2_rpi3.img.gz "RetroPie for version RPi 2/3/4") 2/3/4 and follow the installation instruction at the [retropie website](https://retropie.org.uk/docs/First-Installation/#installation "RetroPie installation instructions").
 	  
@@ -123,6 +123,7 @@ For Batocera:
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_install.sh" | bash
 ```
 
+----------
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
 Installation will automatically reboot once all processes is completed.
 
@@ -171,6 +172,7 @@ For Batocera:
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_uninstall.sh" | bash
 ```
 
+----------
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
 The uninstall script will automatically reboot once all processes are completed.
 
