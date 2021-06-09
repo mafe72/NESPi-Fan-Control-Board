@@ -43,9 +43,9 @@ if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
                sed -i '/sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&/c\' "$RC";
 fi
 
-if grep -q "sudo python $script \&" "$RC";
+if grep -q "sudo python \/opt\/MiniMods\/fan_ctrl.py \&" "$RC";
         then
-               sed -i '/sudo python $script \&/c\' "$RC";
+               sed -i '/sudo python \/opt\/MiniMods\/fan_ctrl.py \&/c\' "$RC";
 fi
 
 #-----------------------------------------------------------
