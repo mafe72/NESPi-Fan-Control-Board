@@ -1,16 +1,18 @@
 #!/bin/bash
 
-SourcePath=https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts
-
 #Step 1)make /boot writable---------------------------------
 mount -o remount, rw /boot
 mount -o remount, rw /
 #-----------------------------------------------------------
 
+SourcePath=https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts
+CNF=/userdata/system/batocera.conf
+script=/userdata/MiniMods/fan_ctrl.py
+DIR=/userdata/system/custom.sh
+
+#-----------------------------------------------------------
 #Step 2)Download Python script-----------------------------
 sleep 2s
-
-CNF=/userdata/system/batocera.conf
 
 if grep -q "system.fan.ctrl" $CNF
 	then
@@ -25,7 +27,6 @@ fi
 mkdir /userdata/MiniMods
 sleep 2s
 
-script=/userdata/MiniMods/fan_ctrl.py
 if [ -e $script ];
 	then
 		echo "Fan control already installed. Updating..."
@@ -41,7 +42,6 @@ fi
 sleep 2s
 
 #Step 3) Enable Python script to run on start up------------
-DIR=/userdata/system/custom.sh
 
 if grep -q "python $script &" $DIR
 	then
@@ -59,7 +59,7 @@ fi
 #-----------------------------------------------------------
 
 #Step 4) Reboot to apply changes----------------------------
-echo "NESPi Fan Control Board installation done. Will now reboot after 3 seconds."
+echo "NESPi Fan Control Board installation complete. Rebooting after 3 seconds."
 sleep 3
 reboot
 
