@@ -7,11 +7,16 @@ mount -o remount, rw /boot
 mount -o remount, rw /
 #-----------------------------------------------------------
 
+CNF=/userdata/system/batocera.conf
+DIR=/userdata/system/custom.sh
+MDIR=/userdata/MiniMods
+script=/userdata/MiniMods/fan_ctrl.py
+
+#-----------------------------------------------------------
 #Step 2) Remove Installation directory and configration-----
 echo "Cleaning configration files..."
-CNF=/userdata/system/batocera.conf
 
-rm -r /userdata/MiniMods
+rm -r $MDIR
 
 if grep -q 'system.fan.ctrl=FANCTRL' $CNF
 	then
@@ -21,9 +26,6 @@ sleep 2s
 #-----------------------------------------------------------
 
 #Step 3) Remove configuration script -----------------------
-DIR=/userdata/system/custom.sh
-script=/userdata/MiniMods/fan_ctrl.py
-
 if grep -q 'python $script &' $DIR
         then
         sed -i '/python $script &/c ' $DIR
@@ -32,6 +34,6 @@ sleep 2s
 #-----------------------------------------------------------
 
 #Step 4) Reboot to apply changes----------------------------
-echo 'NESPi Fan Control Board un-install complete. Will now reboot after 3 seconds.'
+echo 'NESPi Fan Control Board un-install complete. Rebooting after 3 seconds.'
 sleep 4
 reboot
