@@ -19,7 +19,7 @@ rm /etc/init.d/S99NESPiFanCTRL
 #-----------------------------------------------------------
 
 #Step 4) Reboot to apply changes----------------------------
-echo "NESPi Fan Control Board un-install complete. Will now reboot after 3 seconds."
+echo "NESPi Fan Control Board un-install complete. Rebooting after 3 seconds."
 sleep 4
 reboot
 #-----------------------------------------------------------
