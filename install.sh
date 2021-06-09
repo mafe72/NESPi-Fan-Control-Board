@@ -7,18 +7,23 @@ if [[ $EUID -ne 0 ]]; then
 fi
 #-----------------------------------------------------------
 
+SourcePath=https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts
+CNF=/boot/config.txt
+script=/opt/MiniMods/fan_ctrl.py
+RC=/etc/rc.local
+
+#-----------------------------------------------------------
 #Step 2) Update repository----------------------------------
-cd /boot/
-File=config.txt
-if grep -q "avoid_warnings=0" "$File";
+
+if grep -q "avoid_warnings=0" "$CNF";
         then
-		sed -i '/avoid_warnings=0/d' "$File";
+		sed -i '/avoid_warnings=0/d' "$CNF";
 fi
-if grep -q "avoid_warnings=1" "$File";
+if grep -q "avoid_warnings=1" "$CNF";
         then
                 echo "warnings already disable. Doing nothing."
         else
-                echo "avoid_warnings=1" >> "$File"
+                echo "avoid_warnings=1" >> "$CNF"
                 echo "warnings disable."
 fi
 sudo apt-get update -y
@@ -30,55 +35,32 @@ sudo pip install psutil pyserial
 #-----------------------------------------------------------
 
 #Step 4) Download Python script-----------------------------
-cd /opt/
-sudo mkdir RetroFlag
-cd /opt/RetroFlag
-script=fan_ctrl-retroflag.py
+sudo mkdir /opt/MiniMods
 
 if [ -e $script ];
 	then
-		echo "Script fan_ctrl-retroflag.py already exists. Updating..."
+		echo "Fan control already installed. Updating..."
 		rm $script
-		wget "https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
-		echo "Update complete."
+		wget -O $script "$SourcePath/fan_ctrl-retropie.py"
+		echo "Fan Control update complete."
 	else
-		wget "https://raw.githubusercontent.com/mafe72/NESPi-Fan-Control-Board/master/scripts/fan_ctrl-retroflag.py"
-                echo "Download  complete."
+		wget -O $script "$SourcePath/fan_ctrl-retropie.py"
+                echo "Fan Control download complete."
 fi
 #-----------------------------------------------------------
 
 #Step 5) Enable Python script to run on start up------------
-cd /etc/
-RC=rc.local
-
-#Cleaning deprecated configuration----
-if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
-        then
-               sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&/c\' "$RC";
-fi
-
-if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl.py \&" "$RC";
-        then
-               sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl.py \&/c\' "$RC";
-fi
-
-if grep -q "sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
-        then
-               sed -i '/sudo python3 \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&/c\' "$RC";
-fi
-
-#Adding new configuration------------ 
-if grep -q "sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&" "$RC";
+if grep -q "sudo python $script &" "$RC";
 	then
-		echo "File /etc/rc.local already configured. Doing nothing."
+		echo "Fan Control script already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python \/opt\/RetroFlag\/fan_ctrl-retroflag.py \&\n&/g" "$RC"
-		echo "File /etc/rc.local configured."
+		sed -i -e "s/^exit 0/sudo python $script \&\n&/g" "$RC"
+		echo "Fan Control script configured."
 fi
 #-----------------------------------------------------------
 
 #Step 6) Reboot to apply changes----------------------------
-echo "NESPi Fan Control Board installation done. Will now reboot after 3 seconds."
+echo "NESPi Fan Control Board installation complete. Rebooting after 3 seconds."
 sleep 4
 sudo reboot
 #-----------------------------------------------------------
