@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Installation script for For Batocera
+
 #Step 1)make /boot writable---------------------------------
 mount -o remount, rw /boot
 mount -o remount, rw /

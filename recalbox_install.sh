@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Installation script for For RecalBox
+
 #Step 1)make /boot writable---------------------------------
 sleep 2s
 

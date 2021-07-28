@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Un-install script For RecalBox
+
 #Step 1)make /boot writable---------------------------------
 sleep 2s
 
