@@ -200,6 +200,10 @@ Basic Usage
 
 Hardware versions change log
 -----------
+R_20210726
+
+* Add RASPI-FAN Control, Compatible with all Raspberry Pi models.
+
 V_20200917
 
 * Add compatibility with NESPi-4 Case.
