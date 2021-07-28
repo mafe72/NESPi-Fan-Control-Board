@@ -32,7 +32,7 @@ Features
 
 * One-line script installation
 
-* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, and the YIKESHU Black NES Case or any Raspberry Pi Case and all Raspberry Pi models.
+* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, and the YIKESHU Black NES Case. For none RetroFlag Raspberry Pi Cases use RASPI-FAN Control Board.
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product-category/fan-control-kits/)
 
@@ -46,7 +46,7 @@ Features
 * NESPi-4 Fan Control Compatible with: NESPi-4 Case.
 ![Fan Control](pictures/NESPi-4-FanCtrl-SMD_iso.png)
 
-* RASPI-FAN Control Compatible with: all Raspberry Pi models.
+* RASPI-FAN Control Compatible with: none RetroFlag cases for all Raspberry Pi models.
 ![Fan Control](pictures/RASPI-FAN_iso.png)
 ----------
 
@@ -202,7 +202,7 @@ Hardware versions change log
 -----------
 R_20210726
 
-* Add RASPI-FAN Control, Compatible with all Raspberry Pi models.
+* Add RASPI-FAN Control, Compatible with none RetroFlag cases for all Raspberry Pi models.
 
 V_20200917
 
