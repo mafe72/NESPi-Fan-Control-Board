@@ -197,6 +197,37 @@ Basic Usage
 		Fan will turn OFF when temperature under 40C
 
 ----------
+	
+Adjust Temperature Settings
+-----------
+To adjust the temperature settings, edit the ```bash fan_ctrl.py``` script and adjust the following parameters to your needs:
+
+```bash
+#----------------------------------------------------
+#Edit these values to change the fan control settings
+
+#Turn off fan when under
+minTEMP=40
+
+#Turn on fan when exceeded
+maxTEMP=55
+
+#NOTE:Reboot Raspberry Pi after changing these values
+#----------------------------------------------------
+```
+
+Script location for Raspbian, RetroPie and RecalBox is:
+
+```bash
+/opt/MiniMods/fan_ctrl.py
+```
+
+Script location for Batocera is:
+```bash
+/userdata/MiniMods/fan_ctrl.py
+```
+
+----------
 
 Hardware versions change log
 -----------
