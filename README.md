@@ -200,7 +200,7 @@ Basic Usage
 	
 Adjust Temperature Settings
 -----------
-To adjust the temperature settings, edit the ```bash fan_ctrl.py``` script and adjust the following parameters to your needs:
+To adjust the temperature settings, edit the ```fan_ctrl.py``` script and adjust the following parameters to your needs:
 
 ```bash
 #----------------------------------------------------
