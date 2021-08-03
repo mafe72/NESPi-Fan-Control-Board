@@ -48,6 +48,9 @@ Features
 
 * RASPI-FAN Control Compatible with: none RetroFlag cases for all Raspberry Pi models.
 ![Fan Control](pictures/RASPI-FAN_iso.png)
+
+* RASPI-FAN Control with Lock Header Compatible with: none RetroFlag cases for all Raspberry Pi models.
+![Fan Control](pictures/RASPI-FAN_LockHeader_iso.png)
 ----------
 
 Prerequisites
@@ -231,6 +234,10 @@ Script location for Batocera is:
 
 Hardware versions change log
 -----------
+R_20210729
+
+* Add RASPI-FAN Control with Lock Header, Compatible with none RetroFlag cases for all Raspberry Pi models.
+
 R_20210726
 
 * Add RASPI-FAN Control, Compatible with none RetroFlag cases for all Raspberry Pi models.
