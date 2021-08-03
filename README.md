@@ -232,7 +232,7 @@ Script location for Batocera is:
 
 ----------
 	
-Use Aternative GPIO Fan ON/OFF Signal
+Use Alternative GPIO Fan ON/OFF Signal
 -----------
 To use an alternative GPIO signal, edit the ```fan_ctrl.py``` script and adjust the following parameters to your needs:
 
