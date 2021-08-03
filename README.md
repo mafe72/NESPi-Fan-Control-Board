@@ -231,6 +231,34 @@ Script location for Batocera is:
 ```
 
 ----------
+	
+Use Aternative GPIO Fan ON/OFF Signal
+-----------
+To use an alternative GPIO signal, edit the ```fan_ctrl.py``` script and adjust the following parameters to your needs:
+
+```bash
+#----------------------------------------------------
+#Edit this value to change the default GPIO Fan Signal
+
+#GPIO 17 default Fan ON/OFF Signal
+fanGPIO=17
+
+#NOTE:Reboot Raspberry Pi after changing these values
+#----------------------------------------------------
+```
+
+Script location for Raspbian, RetroPie and RecalBox is:
+
+```bash
+/opt/MiniMods/fan_ctrl.py
+```
+
+Script location for Batocera is:
+```bash
+/userdata/MiniMods/fan_ctrl.py
+```
+
+----------
 
 Hardware change log
 -----------
