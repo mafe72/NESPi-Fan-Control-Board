@@ -232,7 +232,7 @@ Script location for Batocera is:
 
 ----------
 
-Hardware versions change log
+Hardware change log
 -----------
 R_20210729
 
