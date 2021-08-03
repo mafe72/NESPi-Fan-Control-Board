@@ -7,7 +7,7 @@
 #
 #####################################
 # Wiring:
-#  GPIO 17 Fan on signal (OUTPUT)
+#  GPIO 17 Fan ON/OFF signal (OUTPUT)
 #
 #####################################
 # Basic Usage:
@@ -15,7 +15,8 @@
 #	Fan will turn ON when temperature exceeded 55C
 #  FAN OFF
 #	Fan will turn OFF when temperature under 40C
-
+#
+#
 #----------------------------------------------------
 #Edit these values to change the fan control settings
 
@@ -27,6 +28,15 @@ maxTEMP=55
 
 #NOTE:Reboot Raspberry Pi after changing these values
 #----------------------------------------------------
+#
+#----------------------------------------------------
+#Edit this value to change the default GPIO Fan Signal
+
+#GPIO 17 default Fan ON/OFF Signal
+fanGPIO=17
+
+#NOTE:Reboot Raspberry Pi after changing these values
+#----------------------------------------------------
 
 import RPi.GPIO as GPIO
 import time
@@ -34,10 +44,10 @@ import os
 import socket
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.OUT)
+GPIO.setup(fanGPIO, GPIO.OUT)
 GPIO.setwarnings(False)
 
-fan = GPIO.PWM(17, 50) #PWM frequency set to 50Hz
+fan = GPIO.PWM(fanGPIO, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
 def getCPUtemp():
