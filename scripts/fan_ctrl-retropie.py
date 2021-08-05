@@ -19,6 +19,7 @@
 #
 #----------------------------------------------------
 #Edit these values to change the fan control settings
+#Adjust MIN and MAX TEMP as needed
 
 #Turn off fan when under
 minTEMP=40
@@ -27,8 +28,6 @@ minTEMP=40
 maxTEMP=55
 
 #NOTE:Reboot Raspberry Pi after changing these values
-#----------------------------------------------------
-#
 #----------------------------------------------------
 #Edit this value to change the default GPIO Fan Signal
 
