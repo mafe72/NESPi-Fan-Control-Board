@@ -208,6 +208,7 @@ To adjust the temperature settings, edit the ```fan_ctrl.py``` script and adjust
 ```bash
 #----------------------------------------------------
 #Edit these values to change the fan control settings
+#Adjust MIN and MAX TEMP as needed
 
 #Turn off fan when under
 minTEMP=40
