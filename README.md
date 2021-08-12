@@ -131,11 +131,42 @@ For Batocera:
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_install.sh" | bash
 ```
 
-----------
+
 The script will automatically install pertinent files and configure your Raspberry Pi to enable **NESPi Fan Control Board.**
 Installation will automatically reboot once all processes is completed.
 
 After rebooting, your **NESPi Fan Control Board** is now fully functional.
+
+----------
+
+Using the RASPI-Fan Board
+-----------
+To use the RASPI-Fan Board is necesary to edit the default ```fanGPIO``` signal on the fan control script ```fan_ctrl.py``` from GPIO17 to GPIO4.
+
+
+```bash
+#----------------------------------------------------
+#Edit this value to change the default GPIO Fan Signal
+
+#GPIO 17 default Fan ON/OFF Signal
+fanGPIO=4
+
+#NOTE:Reboot Raspberry Pi after changing these values
+#----------------------------------------------------
+```
+
+Script location for Raspbian, RetroPie and RecalBox is:
+
+```bash
+/opt/MiniMods/fan_ctrl.py
+```
+
+Script location for Batocera is:
+```bash
+/userdata/MiniMods/fan_ctrl.py
+```
+
+----------
 
 Software Uninstall
 ---------------------
@@ -180,7 +211,6 @@ For Batocera:
 wget -O - "https://github.com/mafe72/NESPi-Fan-Control-Board/raw/master/batocera_uninstall.sh" | bash
 ```
 
-----------
 The script will automatically uninstall all configuration files from your Raspberry Pi to disable the **NESPi Fan Control Board.**
 The uninstall script will automatically reboot once all processes are completed.
 
