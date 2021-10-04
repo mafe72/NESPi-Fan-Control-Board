@@ -141,7 +141,7 @@ After rebooting, your **NESPi Fan Control Board** is now fully functional.
 
 Using the RASPI-Fan Board
 -----------
-To use the RASPI-Fan Board is necesary to edit the default ```fanGPIO``` signal on the fan control script ```fan_ctrl.py``` from GPIO17 to GPIO4.
+To use the RASPI-Fan Board is necessary to edit the default ```fanGPIO``` signal on the fan control script ```fan_ctrl.py``` from GPIO17 to GPIO4.
 
 
 ```bash
