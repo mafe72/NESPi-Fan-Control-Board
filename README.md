@@ -14,7 +14,7 @@ Features
 
 * Fully compatible script with Raspbian, RetroPie, RecalBox and Batocera
 
-* Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm - NESPi-4 24.2mm x 11.8mm - RASPI-FAN 25.3mm x 10.7mm)
+* Small footprint (NESPi 25.3mm x 10.7mm - SUPERPi-U 23.2mm x 10.6mm - NESPi-4 24.2mm x 11.8mm - PiSTATION 23.2mm x 10.6mm - RASPI-FAN 25.3mm x 10.7mm)
 
 * Easy Temperature Control
 
@@ -32,7 +32,7 @@ Features
 
 * One-line script installation
 
-* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, and the YIKESHU Black NES Case. For none RetroFlag Raspberry Pi Cases use RASPI-FAN Control Board.
+* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, PiSTATION Case and the YIKESHU Black NES Case. For none RetroFlag Raspberry Pi Cases use RASPI-FAN Control Board.
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product-category/fan-control-kits/)
 
