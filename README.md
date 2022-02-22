@@ -38,19 +38,22 @@ Features
 
 ----------
 * NESPi Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
-![Fan Control](pictures/RetroflagNESPi-FanCtrl-SMD_iso.png)
+![NESPi Fan Control](pictures/RetroflagNESPi-FanCtrl-SMD_iso.png)
 
 * SUPERPi-U Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
-![Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso.png)
+![SUPERPi-U Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso.png)
 
 * NESPi-4 Fan Control Compatible with: NESPi-4 Case.
-![Fan Control](pictures/NESPi-4-FanCtrl-SMD_iso.png)
+![NESPi-4 Fan Control](pictures/NESPi-4-FanCtrl-SMD_iso.png)
+
+* PiSTATION Fan Control Compatible with: PiStation Case.
+![PiSTATION Fan Control](pictures/PiSTATION-FanCtrl-SMD_ISO.png)
 
 * RASPI-FAN Control Compatible with: none RetroFlag cases for all Raspberry Pi models.
-![Fan Control](pictures/RASPI-FAN_iso.png)
+![RASPI Fan Control](pictures/RASPI-FAN_iso.png)
 
 * RASPI-FAN Control with Lock Header Compatible with: none RetroFlag cases for all Raspberry Pi models.
-![Fan Control](pictures/RASPI-FAN_LockHeader_iso.png)
+![RASPI Fan Control](pictures/RASPI-FAN_LockHeader_iso.png)
 ----------
 
 Prerequisites
