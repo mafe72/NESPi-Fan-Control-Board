@@ -26,13 +26,13 @@ Features
 
 * 2x 1.25mm 2-Pin Right-Angle JST Socket Fan Connector (NESPi-4 only)
 
-* 2.54mm 2-Pin Right-Angle Through Hole Fan Connector (RASPI-FAN only)
+* 2.54mm 2-Pin Right-Angle Through Hole Fan Connector (RASPI-FAN & PiSTATION only)
 
 * Minimal hardware modification
 
 * One-line script installation
 
-* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, PiSTATION Case and the YIKESHU Black NES Case. For none RetroFlag Raspberry Pi Cases use RASPI-FAN Control Board.
+* Compatible with RetroFlag NESPi-4, SNESPi Case U/J, MEGAPi Case, NESPi Case/NESPi Case +, SUPERPi 4 Case, PiSTATION Case and the YIKESHU Black NES Case. For none RetroFlag Raspberry Pi Cases use RASPI-FAN Control Board.
 
 * You can buy the latest version of this board fully assembled from [http://mini-mods.com](https://mini-mods.com/product-category/fan-control-kits/)
 
@@ -40,7 +40,7 @@ Features
 * NESPi Fan Control Compatible with: MEGAPi Case, NESPi Case/NESPi Case + and the YIKESHU Black NES Case.
 ![NESPi Fan Control](pictures/RetroflagNESPi-FanCtrl-SMD_iso.png)
 
-* SUPERPi-U Fan Control Compatible with: SNESPi Case U and SNESPi Case J.
+* SUPERPi-U Fan Control Compatible with: SNESPi Case, SNESPi Case J and SUPERPi 4 Case.
 ![SUPERPi-U Fan Control](pictures/SUPERPi-U-FanCtrl-SMD_iso.png)
 
 * NESPi-4 Fan Control Compatible with: NESPi-4 Case.
@@ -296,6 +296,10 @@ Script location for Batocera is:
 
 Hardware change log
 -----------
+V_20220209
+
+* Add PiSTATION Fan Control, Compatible with RetroFlag PiStation Case.
+
 R_20210729
 
 * Add RASPI-FAN Control with Lock Header, Compatible with none RetroFlag cases for all Raspberry Pi models.
