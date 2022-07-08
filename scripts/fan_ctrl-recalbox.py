@@ -50,14 +50,14 @@ fan = GPIO.PWM(fanGPIO, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
 def getCPUtemp():
-	res = os.popen('vcgencmd measure_temp').readline()
+	res = os.popen('cat /sys/class/thermal/thermal_zone0/temp').readline()
 	return (res.replace("temp=","").replace("'C\n",""))
 	
 while True:
 	#Fan control
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
 	#on and off with only a one second loop
-	cpuTemp = int(float(getCPUtemp()))
+	cpuTemp = int(float(getCPUtemp())/1000)
 	fanOnTemp = maxTEMP
 	fanOffTemp = minTEMP
 	if cpuTemp >= fanOnTemp:
