@@ -29,7 +29,7 @@ if grep -q "avoid_warnings=1" "$CNF";
                 echo "avoid_warnings=1" >> "$CNF"
                 echo "warnings disable."
 fi
-sudo apt-get update -y
+#sudo apt-get update -y
 #-----------------------------------------------------------
 
 #Step 3) Install gpiozero module----------------------------
