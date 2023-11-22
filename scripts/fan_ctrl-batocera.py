@@ -12,7 +12,7 @@
 #####################################
 # Basic Usage:
 #  FAN ON
-#	Fan will turn ON when temperature exceededs 55C
+#	Fan will turn ON when temperature exceeded 55C
 #  FAN OFF
 #	Fan will turn OFF when temperature under 40C
 #
