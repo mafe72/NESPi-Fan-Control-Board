@@ -12,20 +12,21 @@
 #####################################
 # Basic Usage:
 #  FAN ON
-#	Fan will turn ON when temperature exceeded 55C
+#	Fan will turn ON when temperature exceededs 55C
 #  FAN OFF
 #	Fan will turn OFF when temperature under 40C
 #
 #
 #----------------------------------------------------
 #Edit these values to change the fan control settings
-#Adjust MIN and MAX TEMP as needed
+#Adjust Incremental Fan Speed TEMP as needed
 
-#Turn off fan when under
-minTEMP=40
+# Fan temperature range
+offTEMP=40
+minTEMP=55
+midTEMP=70
+maxTEMP=85
 
-#Turn on fan when exceeded
-maxTEMP=55
 
 #NOTE:Reboot Raspberry Pi after changing these values
 #----------------------------------------------------
@@ -56,13 +57,15 @@ def getCPUtemp():
 while True:
 	#Fan control
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
-	#on and off with only a one second loop
+	#Temp is checked on a one second loop
 	cpuTemp = int(float(getCPUtemp())/1000)
-	fanOnTemp = maxTEMP
-	fanOffTemp = minTEMP
-	if cpuTemp >= fanOnTemp:
-		fan.start(90) #90% duty cycle
-	if cpuTemp < fanOffTemp:
-		fan.stop()
-	time.sleep(1.00)
+        if cpuTemp >= minTEMP:
+                fan.start(45) #min duty cycle
+        elif cpuTemp >= midTEMP:
+                fan.start(65) #mid duty cycle
+        elif cpuTemp >= maxTEMP:
+                fan.start(90) #max duty cycle
+        elif cpuTemp < offTEMP:
+                fan.stop()
+        time.sleep(1.00)
 
