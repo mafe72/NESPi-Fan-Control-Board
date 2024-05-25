@@ -12,9 +12,9 @@
 #####################################
 # Basic Usage:
 #  FAN ON
-#	Fan will turn ON when temperature exceeded 55C
+#	Fan will turn ON when the temperature exceeds 55C
 #  FAN OFF
-#	Fan will turn OFF when temperature under 40C
+#	Fan will turn OFF when the temperature is under 40C
 #
 #
 #----------------------------------------------------
@@ -59,13 +59,12 @@ while True:
 	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
 	#Temp is checked on a one second loop
 	cpuTemp = int(float(getCPUtemp())/1000)
-        if cpuTemp >= minTEMP:
-                fan.start(45) #min duty cycle
-        elif cpuTemp >= midTEMP:
-                fan.start(65) #mid duty cycle
-        elif cpuTemp >= maxTEMP:
-                fan.start(90) #max duty cycle
-        elif cpuTemp < offTEMP:
-                fan.stop()
-        time.sleep(1.00)
-
+	if cpuTemp >= minTEMP:
+		fan.start(65) #min duty cycle
+	elif cpuTemp >= midTEMP:
+		fan.start(75) #mid duty cycle
+	elif cpuTemp >= maxTEMP:
+		fan.start(90) #max duty cycle
+	elif cpuTemp < offTEMP:
+		fan.stop()
+	time.sleep(1.00)
