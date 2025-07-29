@@ -24,7 +24,7 @@ if grep -q "avoid_warnings=0" "$CNF";
 fi
 if grep -q "avoid_warnings=1" "$CNF";
         then
-                echo "warnings already disable. Doing nothing."
+                echo "warnings already disabled. Doing nothing."
         else
                 echo "avoid_warnings=1" >> "$CNF"
                 echo "warnings disable."
@@ -33,8 +33,8 @@ fi
 #-----------------------------------------------------------
 
 #Step 3) Install gpiozero module----------------------------
-sudo apt-get install -y python-dev python-pip python-gpiozero
-sudo pip install psutil pyserial
+sudo apt-get install -y python3-dev python3-pip python3-gpiozero
+sudo pip install psutil pyserial --break-system-packages
 #-----------------------------------------------------------
 
 #Step 4) Download Python script-----------------------------
@@ -51,13 +51,26 @@ if [ -e $script ];
                 echo "Fan Control download complete."
 fi
 #-----------------------------------------------------------
-
+# Ensure /etc/rc.local exists with basic structure
+if [ ! -f "$RC" ]; then
+    echo "Creating /etc/rc.local..."
+    {
+        echo "#!/bin/sh -e"
+        echo ""
+        echo "# rc.local"
+		echo ""
+		echo ""
+        echo "exit 0"
+    } > "$RC"
+    chmod +x "$RC"
+    echo "/etc/rc.local created with default content."
+fi
 #Step 5) Enable Python script to run on start up------------
 if grep -q "sudo python \/opt\/MiniMods\/fan_ctrl.py \&" "$RC";
 	then
 		echo "Fan Control script already configured. Doing nothing."
 	else
-		sed -i -e "s/^exit 0/sudo python \/opt\/MiniMods\/fan_ctrl.py \&\n&/g" "$RC"
+		sed -i -e "s/^exit 0/sudo python3 \/opt\/MiniMods\/fan_ctrl.py \&\n&/g" "$RC"
 		echo "Fan Control script configured."
 fi
 #-----------------------------------------------------------
