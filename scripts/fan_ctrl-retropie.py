@@ -12,9 +12,9 @@
 #####################################
 # Basic Usage:
 #  FAN ON
-#	Fan will turn ON when the temperature exceeds 55C
+#	Fan will turn ON when the temperature exceeds 55 °C
 #  FAN OFF
-#	Fan will turn OFF when the temperature is under 40C
+#	Fan will turn OFF when the temperature is under 40 °C
 #
 #
 #----------------------------------------------------
@@ -28,14 +28,14 @@ midTEMP=70
 maxTEMP=85
 
 
-#NOTE:Reboot Raspberry Pi after changing these values
+#NOTE: Reboot the  Raspberry Pi after changing these values
 #----------------------------------------------------
 #Edit this value to change the default GPIO Fan Signal
 
 #GPIO 17 default Fan ON/OFF Signal
 fanGPIO=17
 
-#NOTE:Reboot Raspberry Pi after changing these values
+#NOTE: Reboot the Raspberry Pi after changing these values
 #----------------------------------------------------
 
 import RPi.GPIO as GPIO
@@ -50,14 +50,14 @@ fan = GPIO.PWM(fanGPIO, 50) #PWM frequency set to 50Hz
 
 #Get CPU Temperature
 def getCPUtemp():
-	res = os.popen('vcgencmd measure_temp').readline()
-	return (res.replace("temp=","").replace("'C\n",""))
-	
+        res = os.popen('vcgencmd measure_temp').readline()
+        return (res.replace("temp=","").replace("'C\n",""))
+
 while True:
-	#Fan control
-	#Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
-	#Temp is checked on a one second loop
-	cpuTemp = int(float(getCPUtemp()))
+        #Fan control
+        #Adjust MIN and MAX TEMP as needed to keep the FAN from kicking
+        #Temp is checked on a one second loop
+        cpuTemp = int(float(getCPUtemp()))
         if cpuTemp >= minTEMP:
                 fan.start(65) #min duty cycle
         elif cpuTemp >= midTEMP:
